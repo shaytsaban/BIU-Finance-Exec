@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principles of Finance - Exercises Website</title>
+    <!-- Bootstrap CSS via CDN for modern, responsive design -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e2e6ea);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        .header h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-top: 0;
+            opacity: 0.9;
+        }
+        .description {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .btn-download {
+            font-size: 1.6rem;
+            padding: 20px 40px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #28a745, #1e7e34);
+            border: none;
+            font-weight: bold;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+        }
+        .videos-section {
+            background: white;
+            padding: 60px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin: 40px 0;
+        }
+        .videos-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #007bff;
+            position: relative;
+        }
+        .videos-section h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer {
+            background: linear-gradient(135deg, #343a40, #23272b);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Principles of Finance - Exercises Website</h1>
+            <h2>Dr. Shay Tsaban</h2>
+        </div>
+    </header>
+
+    <!-- Description Section -->
+    <section class="description">
+        <p>This site accompanies the official site of Professor Meni Abudy at Bar Ilan University and will contain all the exercises materials given by Dr. Shay Tsaban.</p>
+    </section>
+
+    <!-- Download Button Section -->
+    <section class="text-center mb-5">
+        <a href="Coursebook - Finance EXEC BIU - 2025 C.xlsx" class="btn btn-lg btn-download" download>Download Coursebook - Finance EXEC BIU - 2025 C.xlsx</a>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos-section">
+        <div class="container">
+            <h2>Live Sessions Recordings</h2>
+            <div class="video-grid">
+                <!-- Add iframes for embedded videos as they become available -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>Contact: <a href="mailto:shay.tsaban@gmail.com">shay.tsaban@gmail.com</a></p>
+            <p>&copy; 2025 Dr. Shay Tsaban | Bar Ilan University</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS via CDN for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
