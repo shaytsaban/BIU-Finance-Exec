@@ -97,24 +97,34 @@
     }
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 0 20px;
     }
     .video-title {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 10px;
       text-align: center;
       color: #444;
     }
-    .video-wrapper iframe {
+    .video-wrapper {
+      position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1;
-      border-radius: 10px;
+      padding-top: 100%;
+      overflow: hidden;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
     .footer {
       background: linear-gradient(135deg, #343a40, #23272b);
@@ -160,7 +170,7 @@
         <div>
           <p class="video-title">Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!</p>
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/61tqX0weKv4" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/61tqX0weKv4" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>
