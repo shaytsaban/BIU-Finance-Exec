@@ -97,17 +97,24 @@
     }
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 30px;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
     .video-title {
-      font-size: 1rem;
-      margin-top: 10px;
-      color: #333;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
       text-align: center;
+      color: #444;
+    }
+    .video-wrapper iframe {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .footer {
       background: linear-gradient(135deg, #343a40, #23272b);
@@ -151,8 +158,10 @@
       <h2>Live Sessions Recordings</h2>
       <div class="video-grid">
         <div>
-          <iframe width="100%" height="215" src="https://www.youtube.com/embed/61tqX0weKv4" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <p class="video-title">Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!</p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/61tqX0weKv4" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
