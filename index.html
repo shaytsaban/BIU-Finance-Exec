@@ -1,123 +1,169 @@
+Here is the updated HTML code.
+
+I've revised the design to be cleaner, more modern, and more vibrant. I also corrected the aspect ratio of the embedded videos to 16:9 (which is standard for YouTube) and organized each video and its title into a distinct "card" for a much cleaner layout.
+
+Finally, I added the new lecture, "Revesal Towards Final Exam," at the end of the video list as requested.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Principles of Finance - Exercises Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #f8f9fa, #e2e6ea);
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fc;
       color: #333;
       margin: 0;
       padding: 0;
     }
+
     .header {
-      background: linear-gradient(135deg, #007bff, #0056b3);
+      background: linear-gradient(135deg, #0062E6, #33AEFF);
       color: white;
-      padding: 80px 0;
+      padding: 70px 0;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 25px rgba(0, 98, 230, 0.2);
     }
+
     .header h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       margin-bottom: 10px;
     }
+
     .header h2 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 400;
       margin-top: 0;
       opacity: 0.9;
     }
+
     .description {
-      max-width: 900px;
-      margin: 50px auto;
+      max-width: 800px;
+      margin: 40px auto;
       text-align: center;
-      font-size: 1.2rem;
-      line-height: 1.6;
+      font-size: 1.15rem;
+      line-height: 1.7;
       color: #555;
     }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 40px 0 50px 0;
+    }
+
+    .btn-custom {
+      font-size: 1.25rem;
+      padding: 18px 35px;
+      border-radius: 50px;
+      border: none;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      color: white;
+    }
+
     .btn-download {
-      font-size: 1.6rem;
-      padding: 20px 40px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #28a745, #1e7e34);
-      border: none;
-      font-weight: bold;
-      color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+      background: linear-gradient(135deg, #1D976C, #93F9B9);
     }
+    
     .btn-download:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+       background: linear-gradient(135deg, #1a8a62, #82e0a5);
     }
+
     .btn-zoom {
-      font-size: 1.6rem;
-      padding: 20px 40px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #007bff, #0056b3);
-      border: none;
-      font-weight: bold;
-      color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+      background: linear-gradient(135deg, #FF416C, #FF4B2B);
     }
+
     .btn-zoom:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+       background: linear-gradient(135deg, #e63a60, #e64426);
     }
+
     .videos-section {
-      background: white;
+      background: #ffffff;
       padding: 60px 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       margin: 40px 0;
+      box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.03);
     }
+
     .videos-section h2 {
       text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-      color: #007bff;
+      margin-bottom: 50px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0062E6;
       position: relative;
     }
+
     .videos-section h2::after {
       content: '';
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(135deg, #007bff, #0056b3);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, #0062E6, #33AEFF);
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
+      border-radius: 2px;
     }
+
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 40px;
-      max-width: 1000px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
-    .video-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      text-align: center;
-      color: #444;
+
+    .video-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+      overflow: hidden;
+      transition: all 0.3s ease;
     }
+    
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 18px 20px;
+      text-align: center;
+      color: #333;
+      margin-bottom: 0;
+    }
+
     .video-wrapper {
       position: relative;
       width: 100%;
-      padding-top: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
       overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     .video-wrapper iframe {
       position: absolute;
       top: 0;
@@ -126,20 +172,25 @@
       height: 100%;
       border: 0;
     }
+
     .footer {
-      background: linear-gradient(135deg, #343a40, #23272b);
+      background: linear-gradient(135deg, #232526, #414345);
       color: white;
       padding: 30px 0;
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      margin-top: 40px;
     }
+
     .footer a {
       color: #ffffff;
       text-decoration: none;
+      font-weight: 600;
       transition: color 0.3s ease;
     }
+
     .footer a:hover {
-      color: #007bff;
+      color: #33AEFF;
     }
   </style>
 </head>
@@ -151,66 +202,81 @@
     </div>
   </header>
 
-  <section class="description">
-    <p>This site accompanies the official site of Professor Meni Abudy at Bar Ilan University and will contain all the exercises materials given by Dr. Shay Tsaban.</p>
-  </section>
+  <main>
+    <section class="description">
+      <p>This site accompanies the official site of Professor Meni Abudy at Bar Ilan University and will contain all the exercises materials given by Dr. Shay Tsaban.</p>
+    </section>
 
-  <section class="text-center mb-5">
-    <a href="Coursebook - Finance EXEC BIU - 2025 C.xlsx" class="btn btn-lg btn-download" download>📖 Download Coursebook</a>
-  </section>
+    <section class="button-container">
+      <a href="Coursebook - Finance EXEC BIU - 2025 C.xlsx" class="btn-custom btn-download" download>📖 Download Coursebook</a>
+      <a href="https://yvc-ac-il.zoom.us/j/6302238641" class="btn-custom btn-zoom" target="_blank">📹 Join Live Sessions</a>
+    </section>
 
-  <section class="text-center mb-5">
-    <a href="https://yvc-ac-il.zoom.us/j/6302238641" class="btn btn-lg btn-zoom" target="_blank">📹 Join the live sessions via zoom here</a>
-  </section>
-
-  <section class="videos-section">
-    <div class="container">
-      <h2>Live Sessions Recordings</h2>
-      <div class="video-grid">
-        <div>
-          <p class="video-title">Exercise 1 - 7.8.2025 - PV Calculations and Financial Calculator Explanations!</p>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/61tqX0weKv4" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-          <p class="video-title">Exercise 2 - 14.8.2025 - FV Calculations and a tiny bit about LOANS!</p>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/hgE2ql75o7o" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-          <p class="video-title">Exercise 3 - 21.8.2025 - Effective Interest Calculations</p>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/Oep746iF_lo" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-           <p class="video-title">Exercise 4 - 28.8.2025 - Bonds</p>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/0fP1fW0_4aI" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-            <p class="video-title">Exercise 5 - 4.9.2025 - Linkaged Bonds (Hatzmada) </p>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/fzi-6KJL4os" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-           <p class="video-title">Exercise 6 - 11.9.2025 - Projects </p>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/9mWcgEGzo3k" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-            <p class="video-title">Exercise 7 - 18.9.2025 - Projects </p>
-          <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/XJpLr424i0I" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-
-
+    <section class="videos-section">
+      <div class="container">
+        <h2>Live Sessions Recordings</h2>
+        <div class="video-grid">
           
-         
+          <div class="video-card">
+            <p class="video-title">Exercise 1 - 7.8.2025 - PV Calculations and Financial Calculator</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/61tqX0weKv4" title="Exercise 1 - 7.8.2025 - FV Calculations and Financial Calculator Explanations!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          
+          <div class="video-card">
+            <p class="video-title">Exercise 2 - 14.8.2025 - FV Calculations and a tiny bit about LOANS!</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/hgE2ql75o7o" title="Exercise 2 - 14.8.2025 - FV Calculations and a tiny bit about LOANS!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <p class="video-title">Exercise 3 - 21.8.2025 - Effective Interest Calculations</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/Oep746iF_lo" title="Exercise 3 - 21.8.2025 - Effective Interest Calculations" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <p class="video-title">Exercise 4 - 28.8.2025 - Bonds</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/0fP1fW0_4aI" title="Exercise 4 - 28.8.2025 - Bonds" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          
+          <div class="video-card">
+            <p class="video-title">Exercise 5 - 4.9.2025 - Linkaged Bonds (Hatzmada)</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/fzi-6KJL4os" title="Exercise 5 - 4.9.2025 - Linkaged Bonds (Hatzmada)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <p class="video-title">Exercise 6 - 11.9.2025 - Projects</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/9mWcgEGzo3k" title="Exercise 6 - 11.9.2025 - Projects" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          
+          <div class="video-card">
+            <p class="video-title">Exercise 7 - 18.9.2025 - Projects</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/XJpLr424i0I" title="Exercise 7 - 18.9.2025 - Projects" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <p class="video-title">Revesal Towards Final Exam - 20.10.2025</p>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/OaOCRZM4db0" title="Revesal Towards Final Exam - 20.10.2025" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -222,3 +288,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+```
